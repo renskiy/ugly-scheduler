@@ -1,3 +1,0 @@
-#!/usr/bin/env sh
-
-sql-migrate-config | sql-migrate up -config /dev/stdin -env default
