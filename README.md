@@ -1,4 +1,5 @@
 # ugly-scheduler
+Ugly-scheduler is just a simple schedule service. It uses [Twirp-based](https://github.com/twitchtv/twirp) API which provides benefits from Google's [protobuf](https://en.wikipedia.org/wiki/Protocol_Buffers) (code generation) and REST JSON API (simple request construction).
 
 ## Requirements
 * Go 1.13
