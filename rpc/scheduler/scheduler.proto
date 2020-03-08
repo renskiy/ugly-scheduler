@@ -4,14 +4,18 @@ package scheduler;
 
 option go_package = "rpc";
 
-import "google/protobuf/empty.proto";
-import "google/protobuf/duration.proto";
-
+// Schedule service
 service Scheduler {
-    rpc Schedule(Event) returns (google.protobuf.Empty);
+    rpc Schedule (Event) returns (Empty);
 }
 
+// scheduled event
 message Event {
-    google.protobuf.Duration delay = 1;
-    string message = 2;
+    int64 delay = 1; // delay in seconds, required
+    string message = 2; // text message, required
+}
+
+// empty object
+message Empty {
+
 }

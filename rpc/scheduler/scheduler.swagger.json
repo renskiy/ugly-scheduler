@@ -1,0 +1,64 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "rpc/scheduler/scheduler.proto",
+    "version": "version not set"
+  },
+  "schemes": [
+    "http",
+    "https"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/twirp/scheduler.Scheduler/Schedule": {
+      "post": {
+        "operationId": "Schedule",
+        "responses": {
+          "200": {
+            "description": "A successful response.",
+            "schema": {
+              "$ref": "#/definitions/schedulerEmpty"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "body",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/schedulerEvent"
+            }
+          }
+        ],
+        "tags": [
+          "Scheduler"
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "schedulerEmpty": {
+      "type": "object",
+      "title": "empty object"
+    },
+    "schedulerEvent": {
+      "type": "object",
+      "properties": {
+        "delay": {
+          "type": "string",
+          "format": "int64"
+        },
+        "message": {
+          "type": "string"
+        }
+      },
+      "title": "scheduled event"
+    }
+  }
+}
