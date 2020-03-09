@@ -40,7 +40,8 @@ Create special DB for tests, set `DB_NAME_TEST`* env var and run following comma
 \* *default value for `DB_NAME_TEST` is `ugly-scheduler-test`*
 
 ## Run
-    go run ./cmd/server
+    go run ./cmd/server --addr :8001
+    go run ./cmd/server --addr :8002
 
 ### Making requests
 With default settings one can do requests like following:
